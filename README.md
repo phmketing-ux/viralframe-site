@@ -1,13 +1,31 @@
-# Viral Frame — Homepage
+# 🚧 Viral Frame — Site em Manutenção
 
-Homepage estática da agência Viral Frame. Site single-file (HTML/CSS/JS inline, sem dependências de build).
+Estamos trabalhando em uma nova experiência digital para a Viral Frame.
 
-## Rodar localmente
+Nosso novo site está sendo desenvolvido para oferecer uma navegação mais moderna, rápida e intuitiva, refletindo nossa criatividade, estratégia e compromisso com resultados.
 
-Basta abrir `index.html` no navegador — não precisa de servidor.
+Em breve, estaremos no ar com novidades.
 
-## Publicar no GitHub Pages
+## Sobre a Viral Frame
 
-1. Vá em **Settings → Pages** no repositório.
-2. Em "Source", selecione a branch `main` e a pasta `/ (root)`.
-3. Salve. O site fica disponível em `https://<seu-usuario>.github.io/<nome-do-repo>/` em alguns minutos.
+A Viral Frame é uma agência criativa especializada em:
+
+- Branding e Identidade Visual
+- UX/UI Design
+- Desenvolvimento de Sites
+- Gestão de Redes Sociais
+- Marketing de Performance
+- Estratégia Digital
+- Soluções com Inteligência Artificial
+
+## Contato
+
+📧 agviralframe@gmail.com
+
+🌐 https://viralframe.com.br
+
+---
+
+© 2026 Viral Frame. Todos os direitos reservados.
+
+**Ph — Founder, CEO & Creative Director**
