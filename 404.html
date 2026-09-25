@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Página não encontrada | Viral Frame</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+:root {
+  --yellow: #CCFF00;
+  --gray: #888;
+}
+
+/* ─── NAV LOGO (small, top) ─── */
+.brand {
+  position: absolute;
+  top: 28px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: #fff;
+  text-decoration: none;
+}
+.brand-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--yellow); }
+
+/* ─── HOLO GRADIENT STOP ANIMATION (drives the SVG fill) ─── */
+@keyframes holo-cycle-1 {
+  0%, 100% { stop-color: #a878ff; }
+  25%      { stop-color: #64c8ff; }
+  50%      { stop-color: #ff96c8; }
+  75%      { stop-color: #ccff00; }
+}
+@keyframes holo-cycle-2 {
+  0%, 100% { stop-color: #64c8ff; }
+  25%      { stop-color: #ff96c8; }
+  50%      { stop-color: #ccff00; }
+  75%      { stop-color: #a878ff; }
+}
+@keyframes holo-cycle-3 {
+  0%, 100% { stop-color: #ff96c8; }
+  25%      { stop-color: #ccff00; }
+  50%      { stop-color: #a878ff; }
+  75%      { stop-color: #64c8ff; }
+}
+.g-stop-1 { animation: holo-cycle-1 6s ease-in-out infinite; }
+.g-stop-2 { animation: holo-cycle-2 6s ease-in-out infinite; }
+.g-stop-3 { animation: holo-cycle-3 6s ease-in-out infinite; }
+
+/* ─── SCENE ─── */
+.scene {
+  width: 320px;
+  max-width: 80vw;
+  margin: 0 auto 8px;
+}
+
+/* Typing hands */
+@keyframes type-left {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(3px); }
+}
+@keyframes type-right {
+  0%, 50%, 100% { transform: translateY(0); }
+  25%           { transform: translateY(3px); }
+}
+.hand-left  { animation: type-left 0.5s ease-in-out infinite; transform-origin: top center; }
+.hand-right { animation: type-right 0.5s ease-in-out infinite; transform-origin: top center; }
+
+/* Blinking cursor on the monitor */
+@keyframes blink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.cursor { animation: blink 1s step-end infinite; }
+
+/* Screen code lines appearing */
+@keyframes typeline1 { 0%, 15% { width: 0; } 40%, 100% { width: 14px; } }
+@keyframes typeline2 { 0%, 40% { width: 0; } 65%, 100% { width: 10px; } }
+.line1 { animation: typeline1 2.4s ease infinite; }
+.line2 { animation: typeline2 2.4s ease infinite; }
+
+/* Ground dashes — subtle nod to the runner track */
+.ground-line {
+  stroke-dasharray: 6 6;
+}
+
+/* Tail / body gentle idle bob */
+@keyframes idle-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-2px); }
+}
+.dino-body { animation: idle-bob 3s ease-in-out infinite; transform-origin: bottom center; }
+
+/* ─── COPY ─── */
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-top: 12px;
+}
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 6vw, 40px);
+  letter-spacing: -0.02em;
+  margin: 10px 0 14px;
+}
+p.sub {
+  font-size: 14px;
+  color: #999;
+  max-width: 380px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.btn-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #CCFF00;
+  color: #0a0a0a;
+  padding: 14px 30px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-home:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(204,255,0,0.25); }
+
+footer {
+  position: absolute;
+  bottom: 24px;
+  font-size: 11px;
+  color: #444;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hand-left, .hand-right, .cursor, .line1, .line2, .dino-body { animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<a href="/" class="brand">
+  <span class="brand-dot"></span>
+  VIRALFRAME
+</a>
+
+<div class="scene">
+  <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="holoFill" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop class="g-stop-1" offset="0%"  stop-color="#a878ff"/>
+        <stop class="g-stop-2" offset="50%" stop-color="#64c8ff"/>
+        <stop class="g-stop-3" offset="100%" stop-color="#ff96c8"/>
+      </linearGradient>
+    </defs>
+
+    <!-- ground -->
+    <line x1="10" y1="196" x2="310" y2="196" stroke="#2a2a2a" stroke-width="2" class="ground-line"/>
+
+    <!-- desk -->
+    <rect x="150" y="150" width="120" height="8" rx="2" fill="#1c1c1c"/>
+    <rect x="158" y="158" width="6" height="34" fill="#1c1c1c"/>
+    <rect x="254" y="158" width="6" height="34" fill="#1c1c1c"/>
+
+    <!-- monitor -->
+    <rect x="196" y="108" width="58" height="42" rx="4" fill="#141414" stroke="#2a2a2a" stroke-width="1.5"/>
+    <rect x="222" y="150" width="6" height="8" fill="#141414"/>
+    <rect x="210" y="158" width="30" height="4" rx="2" fill="#141414"/>
+    <!-- screen content -->
+    <rect x="203" y="115" width="44" height="28" rx="1" fill="#050505"/>
+    <rect x="209" y="122" width="0" height="3" fill="#CCFF00" class="line1"/>
+    <rect x="209" y="129" width="0" height="3" fill="#64c8ff" class="line2"/>
+    <rect x="209" y="136" width="4" height="4" fill="#CCFF00" class="cursor"/>
+
+    <!-- keyboard -->
+    <rect x="184" y="150" width="46" height="7" rx="1.5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+
+    <!-- ============ DINO ============ -->
+    <g class="dino-body">
+      <!-- tail -->
+      <path d="M62,152 Q28,162 12,146 Q24,134 58,132 Q68,140 62,152 Z" fill="url(#holoFill)"/>
+
+      <!-- back legs (feet) -->
+      <ellipse cx="93" cy="197" rx="15" ry="6" fill="url(#holoFill)" opacity="0.85"/>
+      <ellipse cx="132" cy="199" rx="15" ry="6" fill="url(#holoFill)" opacity="0.85"/>
+      <!-- legs -->
+      <ellipse cx="93" cy="182" rx="17" ry="21" fill="url(#holoFill)"/>
+      <ellipse cx="132" cy="185" rx="17" ry="21" fill="url(#holoFill)"/>
+
+      <!-- body -->
+      <ellipse cx="108" cy="128" rx="56" ry="46" fill="url(#holoFill)" transform="rotate(-8 108 128)"/>
+
+      <!-- head + snout -->
+      <path d="M148,78
+               Q176,64 202,76
+               Q224,86 224,104
+               Q224,118 206,122
+               Q188,126 172,118
+               Q152,108 146,92
+               Q144,84 148,78 Z" fill="url(#holoFill)"/>
+
+      <!-- little crest / brow ridge -->
+      <path d="M158,72 Q172,60 190,64 Q176,68 166,78 Z" fill="url(#holoFill)"/>
+
+      <!-- eye -->
+      <circle cx="188" cy="93" r="4" fill="#0a0a0a"/>
+      <circle cx="189.3" cy="91.7" r="1.2" fill="#fff" opacity="0.8"/>
+
+      <!-- jaw line -->
+      <path d="M160,112 Q184,124 210,116" stroke="#0a0a0a" stroke-width="2" fill="none" opacity="0.35" stroke-linecap="round"/>
+    </g>
+
+    <!-- forearm + hand: LEFT (animated) -->
+    <g class="hand-left">
+      <rect x="163" y="118" width="6" height="22" rx="3" fill="url(#holoFill)"/>
+      <circle cx="166" cy="141" r="4.5" fill="url(#holoFill)"/>
+    </g>
+    <!-- forearm + hand: RIGHT (animated) -->
+    <g class="hand-right">
+      <rect x="178" y="120" width="6" height="22" rx="3" fill="url(#holoFill)"/>
+      <circle cx="181" cy="143" r="4.5" fill="url(#holoFill)"/>
+    </g>
+  </svg>
+</div>
+
+<div class="eyebrow">Erro 404</div>
+<h1>Essa página fugiu do frame.</h1>
+<p class="sub">A página que você procura não existe ou foi movida. Enquanto isso, nosso dino tá dando um jeito.</p>
+
+<a href="/" class="btn-home">Voltar pro início →</a>
+
+<footer>© 2026 Viral Frame</footer>
+
+</body>
+</html>
