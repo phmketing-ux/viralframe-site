@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viralframe.com.br/sitemap.xml
